@@ -1,0 +1,28 @@
+server:
+  port: 8097
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spark
+    username: postgres
+    password: postgres
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  application:
+    name: Apache Spark
+
+spark:
+  master: local[*]
+  driver:
+    host: #driver host information for spark master 172.16.66.15
+    port: #driver port information for spark master 30805
+    bind-address: #0.0.0.0
+
+#application:
+#  spark:
+#    master: #master host information for spark
+#    driver:
+#      host: #driver host information for spark master
+#      port: #driver port information for spark master
+#      bind-address: #0.0.0.0
